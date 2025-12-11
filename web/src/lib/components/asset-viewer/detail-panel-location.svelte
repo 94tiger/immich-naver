@@ -47,7 +47,7 @@
 
       <div>
         {#if asset.exifInfo?.city}
-          <p>{asset.exifInfo.city}</p>
+          <p>{asset.exifInfo.city + " " + (asset.exifInfo.detail ?? "")}</p>
         {/if}
         {#if asset.exifInfo?.state}
           <div class="flex gap-2 text-sm">
