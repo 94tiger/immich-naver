@@ -8,7 +8,7 @@
   import { assetViewingStore } from '$lib/stores/asset-viewing.store';
   import { navigate } from '$lib/utils/navigation';
   import { handlePromiseError } from '$lib/utils';
-  import Portal from '$lib/components/shared-components/portal/portal.svelte';
+  import Portal from '$lib/elements/Portal.svelte';
 
 
  // const CLIENT_ID = import.meta.env.VITE_NAVER_CLIENT_ID  ?? 'YOUR_NAVER_MAP_CLIENT_ID';
@@ -181,7 +181,7 @@
           },
         });
         m.set('id', o.id); // ★ 저장
-        
+
 
         naver.maps.Event.addListener(m, 'mouseover', () => {
           const el = m.getElement();
